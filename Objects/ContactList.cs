@@ -34,5 +34,9 @@ namespace ContactList.Objects
     {
       return _instances;
     }
+    public int GetId()
+    {
+      return _id;
+    }
   }
 }
