@@ -19,6 +19,10 @@ namespace ContactList.Modules
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-number"], Request.Form["new-address"]);
         return View["ContactAdded.cshtml", newContact];
       };
+      Get["/ContactInfo/{id}"] = parameter => {
+        Contact contact = Contact.Find(parameter.id);
+        return View["ContactInfo.cshtml", contact];
+      };
     }
   }
 }
