@@ -23,6 +23,9 @@ namespace ContactList.Modules
         Contact contact = Contact.Find(parameter.id);
         return View["ContactInfo.cshtml", contact];
       };
+      Post["/RemoveSuccess"] = _ =>
+      Contact.ClearAll();
+      return View["RemoveSuccess.cshtml"]
     }
   }
 }
