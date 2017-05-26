@@ -11,6 +11,9 @@ namespace Contacts.Modules
       Get["/"] = _ => {
         return View["index.cshtml"];
       };
+      Get["FormContact"] = _ => {
+        return View["FormContact.cshtml"];
+      };
     }
   }
 }
