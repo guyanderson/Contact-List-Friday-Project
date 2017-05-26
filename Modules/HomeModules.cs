@@ -1,8 +1,8 @@
 using Nancy;
 using System.Collections.Generic;
-// using Contacts.Objects;
+using ContactList.Objects;
 
-namespace Contacts.Modules
+namespace ContactList.Modules
 {
   public class HomeModule : NancyModule
   {
@@ -17,7 +17,7 @@ namespace Contacts.Modules
       Post["FormContact"] = _ => {
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-number"], Request.Form["new-address"]);
         return View["ContactSuccess", newContact];
-      }
+      };
     }
   }
 }
