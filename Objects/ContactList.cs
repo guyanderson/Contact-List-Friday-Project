@@ -30,5 +30,9 @@ namespace ContactList.Objects
     {
       return _address;
     }
+    public static List<Contact> GetAll()
+    {
+      return _instances;
+    }
   }
 }

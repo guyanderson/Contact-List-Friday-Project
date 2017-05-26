@@ -3,7 +3,13 @@
 }
 <h1>Welcome to your very own contact list!</h1>
 <p>Let's see how many people you know.</p>
-
-
+@if (@Model.Count == 0)
+{
+  <h3>You have no entries in your Contact List!</h3>
+}
+@foreach (var contact in Model)
+{
+  <p>@contact.GetName()</p>
+}
 
 <h3>Click <a href="FormContact">here</a> to create a new contact</h3>
