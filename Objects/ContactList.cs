@@ -22,5 +22,13 @@ namespace ContactList.Objects
     {
       return _name;
     }
+    public int GetNumber()
+    {
+      return _number;
+    }
+    public string GetAddress()
+    {
+      return _address;
+    }
   }
 }
