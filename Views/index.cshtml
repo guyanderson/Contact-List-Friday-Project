@@ -2,7 +2,7 @@
   Layout="Shared/_Layout.cshtml";
 }
 <h1>Welcome to your very own contact list!</h1>
-<p>Let's see how many people you know.</p>
+<h3>Let's see how many people you know.</h3>
 @if (@Model.Count == 0)
 {
   <h3>You have no entries in your Contact List!</h3>
@@ -13,6 +13,7 @@
 }
 
 <h3>Click <a href="FormContact">here</a> to create a new contact</h3>
+<br>
 <form  action="/RemoveSuccess" method="post">
   <button type="submit" name="button">Unfriend all contacts</button>
 </form>
