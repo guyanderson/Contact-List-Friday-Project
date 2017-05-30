@@ -22,15 +22,15 @@ _The home page will display a current list of all of the users contacts. There w
 
 ## Specs
 | Behavior      | Input| Output |
-| ------------- :|-------------:|-------------:|
-|Home view will display all current contacts on home screen | none | If there are no contacts in list display will be -"You have no entries in your contact list". If there are contacts, they will be listed by contact name. |
+| ------------- |------------- |-------------|
+| Home view will display all current contacts on home screen | none | If there are no contacts in list display will be -"You have no entries in your contact list". If there are contacts, they will be listed by contact name. |
 | Home View will display a link to create a new contact | Click | View will change form entry view |
 | Home view will display a remove all contacts button | Click | view will go to a success screen, with notification of contact removal and a return home button |
 | New contact page will have a form with 3 entries | keyboard entry| name, address, and phone number will be saved and displayed later |
 | New contact page will have a submit button for the form. | Click | the user will be taken to a view of the newly added contacts information. |
 | New contact page will have | Click | user will be returned to home screen |
 | The newly added contact screen will display the contact information.  | none | The contact name will be displayed with the phone number and address below it|
-|The newly added contact screen will display a return to home button | Click | user will be returned to home screen |
+| The newly added contact screen will display a return to home button | Click | user will be returned to home screen |
 | From the home view, the contact name will be clickable | Click | User will be taken to a view of only the Contact and their information|
 
 
