@@ -10,10 +10,10 @@ namespace ContactList.Modules
     {
       Get["/"] = _ => {
         List<Contact> allContacts = Contact.GetAll();
-        return View["index.cshtml", allContacts];
+        return View["Contact.cshtml", allContacts];
       };
-      Get["FormContact"] = _ => {
-        return View["FormContact.cshtml"];
+      Get["ContactForm"] = _ => {
+        return View["ContactForm.cshtml"];
       };
       Post["/ContactAdded"] = _ => {
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-number"], Request.Form["new-address"]);
@@ -23,9 +23,9 @@ namespace ContactList.Modules
         Contact contact = Contact.Find(parameter.id);
         return View["ContactInfo.cshtml", contact];
       };
-      Post["/RemoveSuccess"] = _ => {
+      Post["/ContactRemoved"] = _ => {
       Contact.ClearAll();
-      return View["RemoveSuccess.cshtml"];
+      return View["ContactRemoved.cshtml"];
       };
     }
   }
