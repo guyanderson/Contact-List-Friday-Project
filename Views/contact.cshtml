@@ -10,11 +10,11 @@
 <ul>
 @foreach (var contact in Model)
 {
-  <li><a href='ContactInfo/@contact.GetId()'>@contact.GetName()</a></li>
+  <li><a href='Contact/Info/@contact.GetId()'>@contact.GetName()</a></li>
 }
 </ul>
-<h3>Click <a href="ContactForm">here</a> to create a new contact</h3>
+<h3>Click <a href="Contact/Form">here</a> to create a new contact</h3>
 <br>
-<form  action="/ContactRemoved" method="post">
+<form  action="/Contact/Removed" method="post">
   <button type="submit" name="button">Unfriend all contacts</button>
 </form>

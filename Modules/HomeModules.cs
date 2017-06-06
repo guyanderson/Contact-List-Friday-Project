@@ -12,20 +12,20 @@ namespace ContactList.Modules
         List<Contact> allContacts = Contact.GetAll();
         return View["Contact.cshtml", allContacts];
       };
-      Get["ContactForm"] = _ => {
-        return View["ContactForm.cshtml"];
+      Get["/Contact/Form"] = _ => {
+        return View["Contact_Form.cshtml"];
       };
-      Post["/ContactAdded"] = _ => {
+      Post["/Contact/Added"] = _ => {
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-number"], Request.Form["new-address"]);
-        return View["ContactAdded.cshtml", newContact];
+        return View["Contact_Added.cshtml", newContact];
       };
-      Get["/ContactInfo/{id}"] = parameter => {
+      Get["/Contact/Info/{id}"] = parameter => {
         Contact contact = Contact.Find(parameter.id);
-        return View["ContactInfo.cshtml", contact];
+        return View["Contact_Info.cshtml", contact];
       };
-      Post["/ContactRemoved"] = _ => {
+      Post["/Contact/Removed"] = _ => {
       Contact.ClearAll();
-      return View["ContactRemoved.cshtml"];
+      return View["Contact_Removed.cshtml"];
       };
     }
   }
